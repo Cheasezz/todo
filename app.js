@@ -51,3 +51,11 @@ addButton.addEventListener('click', () => {
   createDeleteListElement(input.value);
   input.value = '';
 });
+
+input.addEventListener('keydown', (e) => {
+	if (e.key === 'Enter') {
+		if (input.value.trim() == '') return;
+		createDeleteListElement(input.value);
+		input.value = '';
+	}
+});
